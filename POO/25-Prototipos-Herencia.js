@@ -12,7 +12,8 @@ class Animal { //clase padre
         console.log("Esto es un segundo metodo");
     }
 }
-//hernecia
+
+//herencia
 class Perro extends Animal { //clase hijo
     constructor(nombre, edad, raza) { //creamos el constructor con las propiedades
         super(nombre, edad, raza); //heredamos las propiedades de la clase padre
@@ -26,22 +27,24 @@ class Perro extends Animal { //clase hijo
         console.log(`${this.nombre} esta corriendo`);//imprimimos el sonido 
     }
 }
-//instancia
-const perro1 = new Perro("Firulais", 5, "Pastor Aleman");
-perro1.nuevoMetodo = function() { //creamos el metodo para la clase hijo perro
-    console.log(`${this.nombre} esta cuiando la casa`); //imprimimos el sonido
-}//creamos el objeto con las propiedades
 
+
+//instancia
+const perro1 = new Perro("Firulais", 5, "Pastor Aleman");//creamos el objeto con las propiedades
+perro1.nuevoMetodo = function() { //creamos el metodo para la clase hijo perro1
+    console.log(`${this.nombre} esta cuiando la casa`); //imprimimos el sonido
+}
 console.log(perro1);//imprimimos el objeto
 perro1.ladrar();//llamamos al metodo de la clase hijo
 perro1.emitirSonido();//llamamos al metodo de la clase padre
 perro1.nuevoMetodo();//llamamos al metodo de la clase hijo
 
-//herencia
+//instancia
 const perro2 = new Perro("Tobby", 10, "Pug"); //creamos el objeto con las propiedades
 console.log(perro2);//imprimimos el objeto
 perro2.ladrar();//llamamos al metodo de la clase hijo
 perro2.correr();//llamamos al metodo de la clase hijo
 perro2.emitirSonido();//llamamos al metodo de la clase padre
+perro2.segundoMetodo();//llamamos al metodo de la clase padre
 //perro2.nuevoMetodo();//no funcionaria ya que nuevoMetodo es un metodo solo de perro1
 

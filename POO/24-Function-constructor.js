@@ -5,6 +5,7 @@ function Persona(nombre, apellido, edad){ //creamos el constructor con las propi
     this.edad = edad //propiedades
 }
 
+//creamos el objeto
 const persona1 = new Persona("Cristiano", "Ronaldo", 40)//creamos el objeto
 console.log(persona1); //imprimimos el objeto
 
