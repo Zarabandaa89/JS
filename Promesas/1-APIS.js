@@ -1,7 +1,7 @@
-function obtenerUsuarios() {
+function obtenerUsuarios() {// Definimos la función
     fetch("https://jsonplaceholder.typicode.com/users") // Hacemos la petición a la API
         .then(response => { // Capturamos la respuesta
-            if (!response.ok) {
+            if (!response.ok) {// Comprobamos si la respuesta es correcta
                 throw new Error("Error en la petición"); // Si la respuesta no es correcta, lanzamos un error
             }
             return response.json(); // Convertimos la respuesta en JSON
